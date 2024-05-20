@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+ name: react-app-cert
+ namespace: default
+spec:
+ secretName: react-app-tls
+ issuerRef:
+   name: letsencrypt-prod
+   kind: ClusterIssuer
+ commonName: 57.151.74.58.sslip.io
+ dnsNames:
+  - 57.151.74.58.sslip.io
