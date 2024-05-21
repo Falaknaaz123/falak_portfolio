@@ -3,11 +3,10 @@ kind: Service
 metadata:
  name: react-portfolio-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: react-portfolio-app
   ports:
-    - port: 5173
-      protocol: TCP
+    - protocol: TCP
+      port: 5173
       targetPort: 5173
-      nodePort: 31000
